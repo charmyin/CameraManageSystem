@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>摄影配置管理</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="/vendors/bootstrap/css/bootstrap.css">
+    <script type="text/javascript" src="/vendors/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #eee;
+      }
+
+      .form-signin {
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin .checkbox {
+        font-weight: normal;
+      }
+      .form-signin .form-control {
+        position: relative;
+        height: auto;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+      }
+      .form-signin .form-control:focus {
+        z-index: 2;
+      }
+      .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      h2{
+        text-align:center;
+      }
+      input{
+        margin-top:3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!--  <form class="form-signin" method="post" action="/camera/save">
+         <button class="btn btn-lg btn-primary btn-block" type="submit">确认</button>
+      </form> -->
+       <form class="form-horizontal" method="post" action="/camera/save">
+        <div class="form-group">
+          <label for="localCircle" class="col-sm-4 control-label" >本地拍摄周期(每隔多少秒)</label>
+          <div class="col-sm-6">
+            <input type="text" name="localCircle" class="form-control" id="localCircle" placeholder="本地拍摄周期">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="localCircle" class="col-sm-4 control-label" >上传周期(每隔多少秒)</label>
+          <div class="col-sm-6">
+            <input type="text" name="localCircle" class="form-control" id="localCircle" placeholder="上传周期">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="localResolution" class="col-sm-4 control-label">本地照片分辨率（例：1024x768）</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="localResolution" placeholder="本地照片分辨率">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="uploadResolution" class="col-sm-4 control-label">上传照片分辨率（例：1024x768）</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="uploadResolution" placeholder="上传照片分辨率">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-4">
+            <label class="control-label" style="float:right;">
+              是否开启RFID拍摄
+            </label>
+          </div>
+          <div class="col-sm-2">
+            <label class="radio-inline">
+              <input type="radio" name="isRfid" id="isRfid1" value="true"> 开启
+            </label>
+          </div>
+          <div class="col-sm-2">
+            <label class="radio-inline">
+              <input type="radio" name="isRfid" id="isRfid2" value="false"> 关闭
+            </label>
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-4">
+            <label class="control-label" style="float:right;">
+              是否关闭拍摄
+            </label>
+          </div>
+          <div class="col-sm-2">
+            <label class="radio-inline">
+              <input type="radio" name="isClosed" id="isClosed1" value="false"> 开启
+            </label>
+          </div>
+          <div class="col-sm-2">
+            <label class="radio-inline">
+              <input type="radio" name="isClosed" id="isClosed2" value="true"> 关闭
+            </label>
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+        <div class="form-group">
+          <label for="endTime" class="col-sm-4 control-label">自动结束拍摄时间点</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="endTime" placeholder="自动结束拍摄时间点">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="endTime" class="col-sm-4 control-label">上传时间段（一天中）</label>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-xs-3">
+                <input type="text" class="form-control" placeholder=".col-xs-2">
+              </div>
+              <div class="col-xs-1">
+                到
+              </div>
+              <div class="col-xs-3">
+                <input type="text" class="form-control" placeholder=".col-xs-4">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">提交</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
