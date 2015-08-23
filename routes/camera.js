@@ -28,7 +28,7 @@ router.get('/show', function(req, res) {
 router.post('/save', function(req, res) {
   
    // db.run("CREATE TABLE camera_config (info TEXT,)");
-    console.log("oooooooooooo");
+
     db.query("SELECT * FROM camera_config", function(err, row) {
         //如果不存在，save
         if(err || !row){
